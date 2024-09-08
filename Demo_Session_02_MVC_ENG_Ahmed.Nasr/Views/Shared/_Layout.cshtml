@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/lib/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    @* Start Header *@
+   @*  <nav class="mt-5">
+        <center>
+            <a href="/Home/Index" class="btn btn-primary">  Movie      </a>
+            <a href="/Home/AboutUs" class="btn btn-warning">  About Us   </a>
+            <a href="/Home/ContactUs" class="btn btn-success">  Contact Us </a>
+            <a href="/Home/Privacy" class="btn btn-dark">  Privacy    </a>
+            <a href="/Acount/Login" class="btn btn-danger">  Login      </a>
+            <a href="/Acount/Register" class="btn btn-info">  Register   </a>
+        </center>
+    </nav> *@
+
+    <!------------------------------------------------------------------->
+    @*HTML Helper*@
+
+ @*    <center>
+    <div class="mt-5">
+    @Html.ActionLink("Home"      , "Index"     , "Home" , null ,new { @class = "btn btn-primary" })
+    @Html.ActionLink("AboutUs"   , "AboutUs"   , "Home" , null , new { @class = "btn btn-warning"})
+    @Html.ActionLink("ContactUs" , "ContactUs" , "Home" , null , new { @class = "btn btn-success" })
+    @Html.ActionLink("Privacy"   , "Privacy"   , "Home" , null , new { @class = "btn btn-dark" })
+    @Html.ActionLink("Login"   , "Login"   , "Acount" , null , new { @class = "btn btn-danger" })
+    @Html.ActionLink("Register"   , "Register"   , "Acount" , null , new { @class = "btn btn-info" })
+    </div>
+    </center>   *@
+
+    <!------------------------------------------------------------------->
+    @*Tags Helper (Most Commend Used (Recommended))*@
+    <center>
+        <div class="mt-5">
+            <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Home</a>
+            <a asp-Controller="Home" asp-action="AboutUs" class="btn btn-warning">About Us</a>
+            <a asp-Controller="Home" asp-action="ContactUs" class="btn btn-success">Contcat Us</a>
+            <a asp-Controller="Home" asp-action="Privacy" class="btn btn-dark">Privacy</a>
+            <a asp-Controller="Acount" asp-action="Login" class="btn btn-danger">Privacy</a>
+            <a asp-Controller="Acount" asp-action="Register" class="btn btn-info">Privacy</a>
+        </div>
+    </center>
+    @*End Helper*@
+
+    <div>
+        @RenderBody()
+    </div>
+
+    @* Start Header *@
+    <nav class="mt-5">
+            <center>
+                <div class="mt-5">
+                    <p>Copyright &copy; Route @DateTime.Now.Year</p>
+                </div>
+           </center>
+    </nav>
+    @* End Header *@
+
+</body>
+</html>
